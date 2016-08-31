@@ -1,5 +1,5 @@
-git  "/usr/share/nginx/html/recycalize" do
-  repository "http://ashok.kumar:kashnia12345@krepo.kelltontech.net:27001/recycalrepo/recycalize.git"
+git  "/var/www/html/kellcode" do
+  repository "https://github.com/ashokkumar2003/kellcode.git"
   revision "master"
   action :sync
 end
