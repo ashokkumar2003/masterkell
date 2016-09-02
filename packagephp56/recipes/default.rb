@@ -156,9 +156,8 @@ execute "service on" do
   command "chkconfig sendmail off;chkconfig sendmail off;chkconfig postfix on;chkconfig httpd on"
 end
 
-
 execute "sysctl" do
-  command "sysctl -e -p"
+  command "sysctl -p"
 end
 
 
