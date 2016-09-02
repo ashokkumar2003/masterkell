@@ -15,6 +15,7 @@ package 'httpd24-devel' do
   action :install
 end
 
+
 package 'gcc' do
   action :install
 end
@@ -69,6 +70,10 @@ package 'php56-mysqlnd' do
 end
 
 package 'php56-dba' do
+  action :install
+end
+
+package 'php56-opcache' do
   action :install
 end
 
