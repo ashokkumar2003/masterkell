@@ -125,6 +125,21 @@ package 'php56-pecl-apc' do
   action :install
 end
 
+cookbook_file "/etc/httpd/httpd.conf" do
+  source "httpd.conf"
+  mode "0644"
+end
+
+cookbook_file "/etc/sysconfig/iptables" do
+  source "iptables"
+  mode "0755"
+end
+
+cookbook_file "/etc/sysctl.conf" do
+  source "sysctl.conf"
+  mode "0644"
+end
+
 service 'httpd' do
         action [ :enable,:start ]
 end
@@ -140,3 +155,10 @@ end
 execute "service on" do
   command "chkconfig sendmail off;chkconfig sendmail off;chkconfig postfix on;chkconfig httpd on"
 end
+
+
+execute "sysctl" do
+  command "sysctl -e -p"
+end
+
+
