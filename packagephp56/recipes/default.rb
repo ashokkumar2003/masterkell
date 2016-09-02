@@ -125,7 +125,7 @@ package 'php56-pecl-apc' do
   action :install
 end
 
-cookbook_file "/etc/httpd/httpd.conf" do
+cookbook_file "/etc/httpd/conf/httpd.conf" do
   source "httpd.conf"
   mode "0644"
 end
