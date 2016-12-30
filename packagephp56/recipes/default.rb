@@ -140,10 +140,10 @@ cookbook_file "/etc/sysconfig/iptables" do
   mode "0755"
 end
 
-cookbook_file "/etc/sysctl.conf" do
-  source "sysctl.conf"
-  mode "0644"
-end
+#cookbook_file "/etc/sysctl.conf" do
+#  source "sysctl.conf"
+#  mode "0644"
+#end
 
 service 'httpd' do
         action [ :enable,:start ]
@@ -161,8 +161,8 @@ execute "service on" do
   command "chkconfig sendmail off;chkconfig sendmail off;chkconfig postfix on;chkconfig httpd on"
 end
 
-execute "sysctl" do
-  command "sysctl -p"
-end
+#execute "sysctl" do
+#  command "sysctl -p"
+#end
 
 
