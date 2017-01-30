@@ -133,6 +133,10 @@ service 'nginx' do
         action [ :enable,:start ]
 end
 
+service 'php-fpm' do
+        action [ :enable,:start ]
+end
+
 service 'sendmail' do
         action [ :enable,:stop ]
 end
@@ -142,5 +146,5 @@ service 'postfix' do
 end
 
 execute "service on" do
-  command "chkconfig sendmail off;chkconfig sendmail off;chkconfig postfix on;chkconfig nginx on"
+  command "chkconfig sendmail off;chkconfig sendmail off;chkconfig postfix on;chkconfig nginx on;chkconfig php-fpm on"
 end
