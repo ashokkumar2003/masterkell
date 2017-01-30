@@ -55,6 +55,11 @@ package 'curl' do
   action :install
 end
 
+package 'php56-fpm' do
+  action :install
+end
+
+
 package 'php56' do
   action :install
 end
