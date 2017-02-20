@@ -3,3 +3,6 @@ cookbook_file "/etc/httpd/conf.d/" do
   mode "0644"
 end
 
+service "httpd" do
+  action [:enable, :restart]
+end
