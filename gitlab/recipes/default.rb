@@ -3,7 +3,8 @@
 #  revision "master"
 #  action :sync
 #end
-git "/var/www/html/ashok/" do
+
+git "/var/www/html/ashok/temprepo" do
   repository "http://kellgitadmin:KelL23gadm@gitlab.kelltontech.net/temprepo/temprepo.git"
   reference "master"
   action :sync
