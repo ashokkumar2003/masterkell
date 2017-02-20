@@ -1,4 +1,4 @@
-cookbook_file "/etc/httpd/conf.d/" do
+cookbook_file "/etc/httpd/conf.d/kell.conf" do
   source "kell.conf"
   mode "0644"
 end
